@@ -1,0 +1,37 @@
+# Virtual environment
+.venv/
+
+# Jupyter runtime artefacts
+.ipynb_checkpoints/
+.jupyter/
+.jupyter_ystore.db
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Source PDFs: copyright-restricted, not committed
+data/raw/
+
+# Derived data: large files that rebuild from source
+# data/clauses.jsonl and data/cross_refs.jsonl ARE committed (primary outputs)
+data/interim/
+data/chroma_db/
+
+# Environment / secrets
+.env
+
+# Run logs: timestamped, is large
+logs/
+
+# Linter / tooling caches
+.ruff_cache/
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Per-notebook plan/spec docs: kept local, not committed (README.md is committed)
+[0-9][0-9]_*.md

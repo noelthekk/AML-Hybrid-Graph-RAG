@@ -1,0 +1,54 @@
+[project]
+name = "aml-hybrid-rag"
+version = "0.1.0"
+description = "Hybrid RAG system for UK AML regulatory compliance"
+requires-python = ">=3.11"
+dependencies = [
+    # Corpus preparation
+    "pdfplumber==0.11.10",
+    "spacy==3.8.14",
+    # Retrieval
+    "rank-bm25==0.2.2",
+    "sentence-transformers==5.6.0",
+    "chromadb==1.5.9",
+    "networkx==3.6.1",
+    # LangChain ecosystem
+    "langchain==1.3.9",
+    "langchain-core==1.4.7",
+    "langchain-community==0.4.2",
+    "langchain-chroma==1.1.0",
+    "langchain-huggingface==0.1.2",
+    "langgraph==1.2.5",
+    # HuggingFace inference (local 4-bit and cluster BF16)
+    "torch>=2.6.0",
+    "accelerate==1.7.0",
+    "bitsandbytes>=0.46.1",
+    # Utilities
+    "pydantic==2.13.4",
+    "requests==2.34.2",
+    "python-dotenv==1.2.2",
+    # Evaluation
+    "pandas==2.3.0",
+    "matplotlib==3.10.3",
+    "ragas==0.4.3",
+    "langchain-google-vertexai",
+    "datasets==5.0.0",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+
+[dependency-groups]
+dev = [
+    "jupyterlab==4.5.8",
+    "ipykernel==7.3.0",
+    "jupyter-collaboration==4.0.2",
+    "jupyter-mcp-tools==0.1.6",
+    "pycrdt==0.13.1",
+    "ruff==0.15.17",
+]

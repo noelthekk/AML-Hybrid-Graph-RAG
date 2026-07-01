@@ -1,0 +1,16 @@
+query,query_type,config,mrr,p@1,r@1,ndcg@1,p@3,r@3,ndcg@3,p@5,r@5,ndcg@5,p@10,r@10,ndcg@10
+customer due diligence requirements,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+customer due diligence requirements,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+customer due diligence requirements,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+concealment of criminal property,exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+concealment of criminal property,exact_anchor,sparse_only,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,1.0,0.5,0.2,1.0,0.5,0.1,1.0,0.5
+concealment of criminal property,exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+politically exposed persons enhanced due diligence,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+politically exposed persons enhanced due diligence,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+politically exposed persons enhanced due diligence,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+suspicious activity report obligation,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+suspicious activity report obligation,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+suspicious activity report obligation,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+beneficial owner definition,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+beneficial owner definition,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+beneficial owner definition,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
