@@ -7,6 +7,7 @@ from pathlib import Path
 
 import requests
 import pdfplumber
+from liteparse import LiteParse
 
 logger = logging.getLogger(__name__)
 
@@ -23,8 +24,18 @@ MANUAL_PDFS = {
 POCA_XML_URL = "https://www.legislation.gov.uk/ukpga/2002/29/data.xml"
 
 _HEADERS = {"User-Agent": "Mozilla/5.0 (research/dissertation)"}
-_MLR_CLAUSE_RE = re.compile(r"(?m)^(\d{1,3})\.(—|[ \t])")
-_MLR_SCHEDULE_RE = re.compile(r"(?m)^SCHEDULE\s+(\d+)\s*$", re.IGNORECASE)
+# Both regexes below accept a slightly wider pattern than pdfplumber's output strictly
+# needs, to also work against LiteParse's output (see extract_pdf_pages_liteparse):
+# - LiteParse's OCR fallback sometimes renders the source's em-dash ("28.-(1)") as a
+#   plain hyphen; verified this widened match is still 218/218-identical against
+#   pdfplumber's own output for mlr_2017 (2026-07-05).
+# - The real schedule headings are one line, "SCHEDULE 1 - Professional Bodies" (title
+#   included) - pdfplumber's reconstruction happens to split the title onto its own
+#   line, which is why requiring nothing else on the line worked before, coincidentally.
+#   Kept case-sensitive (no re.IGNORECASE): body-text mentions like "Schedule 5" use
+#   mixed case, so this still doesn't false-match those.
+_MLR_CLAUSE_RE = re.compile(r"(?m)^(\d{1,3})\.([‐-―\-]|[ \t])")
+_MLR_SCHEDULE_RE = re.compile(r"(?m)^SCHEDULE\s+(\d+)\b")
 _JMLSG_PARA_RE = re.compile(r"(?m)^(\d{1,2}\.\d{1,3}[A-Za-z]?(?:\.\d{1,3}[A-Za-z]?)?)\s")
 _FATF_HEADER_RE = re.compile(
     r"THE FATF RECOMMENDATIONS\s*\nINTERNATIONAL STANDARDS ON COMBATING MONEY LAUNDERING[^\n]*\n",
@@ -69,7 +80,7 @@ def ensure_corpus(raw_dir: Path) -> bool:
 
 
 def extract_pdf_pages(pdf_path: Path, source: str = "") -> list[dict]:
-    """Extract text page by page from a PDF."""
+    """Extract text page by page from a PDF using pdfplumber."""
     pages = []
     with pdfplumber.open(str(pdf_path)) as pdf:
         total = len(pdf.pages)
@@ -80,6 +91,36 @@ def extract_pdf_pages(pdf_path: Path, source: str = "") -> list[dict]:
             if text and text.strip():
                 pages.append({"page_num": i + 1, "text": text.strip()})
     logger.info("%s: %d pages extracted", source or pdf_path.name, len(pages))
+    return pages
+
+
+def extract_pdf_pages_liteparse(pdf_path: Path, source: str = "") -> list[dict]:
+    """Extract text page by page from a PDF using LiteParse. Same output shape as
+    extract_pdf_pages (pdfplumber), so both are interchangeable with the segmentation
+    functions below.
+
+    Validated 2026-07-05 against the real corpus: exact match on mlr_2017 (218/218),
+    jmlsg_2 (901/901), fca_fcg (49/49); 561/567 (98.9%) on jmlsg_1 (a handful of
+    paragraphs have a marginal citation note landing before rather than after the
+    paragraph number, breaking the line-start match - accepted as a known minor gap).
+
+    Not used for fatf_40: LiteParse's reading-order reconstruction breaks down on that
+    document's styled headings (colored/bold recommendation titles interleaved with
+    body text), producing genuinely garbled text no amount of segmentation-regex tuning
+    can fix. pdfplumber extracts fatf_40 correctly - see extract_pdfs.py, which uses
+    pdfplumber for that source specifically. Full investigation, including the page
+    render and positional evidence: 01_corpus_and_retrievers.md's 2026-07-05 Change log
+    entry, and figures/fatf_40_page15_liteparse_diagnosis.png.
+    """
+    parser = LiteParse()
+    result = parser.parse(str(pdf_path))
+    pages = []
+    for page in result.pages:
+        lines = [re.sub(r"[ \t]+", " ", line.strip()) for line in page.text.split("\n")]
+        text = "\n".join(lines).strip()
+        if text:
+            pages.append({"page_num": page.page_num, "text": text})
+    logger.info("%s: %d pages extracted (liteparse)", source or pdf_path.name, len(pages))
     return pages
 
 

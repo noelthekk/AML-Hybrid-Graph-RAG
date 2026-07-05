@@ -1,19 +1,154 @@
 query,query_type,config,mrr,p@1,r@1,ndcg@1,p@3,r@3,ndcg@3,p@5,r@5,ndcg@5,p@10,r@10,ndcg@10
-customer due diligence requirements,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-customer due diligence requirements,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-customer due diligence requirements,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-concealment of criminal property,exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
-concealment of criminal property,exact_anchor,sparse_only,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,1.0,0.5,0.2,1.0,0.5,0.1,1.0,0.5
-concealment of criminal property,exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
-politically exposed persons enhanced due diligence,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-politically exposed persons enhanced due diligence,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-politically exposed persons enhanced due diligence,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-suspicious activity report obligation,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-suspicious activity report obligation,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-suspicious activity report obligation,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-beneficial owner definition,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-beneficial owner definition,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-beneficial owner definition,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"Under MLR 2017 regulation 4, at what point is an e",exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 4, at what point is an e",exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 4, at what point is an e",exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What ownership or voting rights threshold must an ,exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What ownership or voting rights threshold must an ,exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What ownership or voting rights threshold must an ,exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 6, which categories of p",exact_anchor,dense_only,0.5,0.0,0.0,0.0,0.3333333333333333,1.0,0.6309297535714575,0.2,1.0,0.6309297535714575,0.1,1.0,0.6309297535714575
+"Under MLR 2017 regulation 6, which categories of p",exact_anchor,sparse_only,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.2890648263178879
+"Under MLR 2017 regulation 6, which categories of p",exact_anchor,dense_sparse,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.2,1.0,0.430676558073393,0.1,1.0,0.430676558073393
+At what cash payment level does a trader become a ,exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+At what cash payment level does a trader become a ,exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+At what cash payment level does a trader become a ,exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 27, in what circumstance",exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"Under MLR 2017 regulation 27, in what circumstance",exact_anchor,sparse_only,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,1.0,0.5,0.2,1.0,0.5,0.1,1.0,0.5
+"Under MLR 2017 regulation 27, in what circumstance",exact_anchor,dense_sparse,0.1666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.3562071871080222
+What three obligations does MLR 2017 regulation 28,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What three obligations does MLR 2017 regulation 28,exact_anchor,sparse_only,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,1.0,0.3868528072345416,0.1,1.0,0.3868528072345416
+What three obligations does MLR 2017 regulation 28,exact_anchor,dense_sparse,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.2890648263178879
+"Under MLR 2017 regulation 30, when must verificati",exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 30, when must verificati",exact_anchor,sparse_only,0.5,0.0,0.0,0.0,0.3333333333333333,1.0,0.6309297535714575,0.2,1.0,0.6309297535714575,0.1,1.0,0.6309297535714575
+"Under MLR 2017 regulation 30, when must verificati",exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What conditions must a relevant person assess befo,exact_anchor,dense_only,0.5,0.0,0.0,0.0,0.3333333333333333,1.0,0.6309297535714575,0.2,1.0,0.6309297535714575,0.1,1.0,0.6309297535714575
+What conditions must a relevant person assess befo,exact_anchor,sparse_only,0.5,0.0,0.0,0.0,0.3333333333333333,1.0,0.6309297535714575,0.2,1.0,0.6309297535714575,0.1,1.0,0.6309297535714575
+What conditions must a relevant person assess befo,exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 38, what maximum electro",exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 38, what maximum electro",exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 38, what maximum electro",exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What systemic obligation does MLR 2017 regulation ,exact_anchor,dense_only,0.1428571428571428,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.3333333333333333
+What systemic obligation does MLR 2017 regulation ,exact_anchor,sparse_only,0.1666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.3562071871080222
+What systemic obligation does MLR 2017 regulation ,exact_anchor,dense_sparse,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,1.0,0.5,0.2,1.0,0.5,0.1,1.0,0.5
+What records concerning beneficial owners must the,exact_anchor,dense_only,0.1666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.3562071871080222
+What records concerning beneficial owners must the,exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What records concerning beneficial owners must the,exact_anchor,dense_sparse,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,1.0,0.5,0.2,1.0,0.5,0.1,1.0,0.5
+"Under MLR 2017 regulation 29, when must a credit i",exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 29, when must a credit i",exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under MLR 2017 regulation 29, when must a credit i",exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What information must a credit institution gather ,exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What information must a credit institution gather ,exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What information must a credit institution gather ,exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What five acts constitute the principal money laun,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What five acts constitute the principal money laun,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What five acts constitute the principal money laun,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+How does section 328 of POCA 2002 define the arran,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+How does section 328 of POCA 2002 define the arran,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+How does section 328 of POCA 2002 define the arran,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"Under section 329 of POCA 2002, what three types o",exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under section 329 of POCA 2002, what three types o",exact_anchor,sparse_only,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.2,1.0,0.430676558073393,0.1,1.0,0.430676558073393
+"Under section 329 of POCA 2002, what three types o",exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What three conditions must all be satisfied for a ,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What three conditions must all be satisfied for a ,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What three conditions must all be satisfied for a ,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"Under section 331 of POCA 2002, who specifically c",exact_anchor,dense_only,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,1.0,0.3868528072345416,0.1,1.0,0.3868528072345416
+"Under section 331 of POCA 2002, who specifically c",exact_anchor,sparse_only,0.1666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.3562071871080222
+"Under section 331 of POCA 2002, who specifically c",exact_anchor,dense_sparse,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,1.0,0.3868528072345416,0.1,1.0,0.3868528072345416
+What three elements must be present for a person t,exact_anchor,dense_only,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.2890648263178879
+What three elements must be present for a person t,exact_anchor,sparse_only,0.1111111111111111,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.3010299956639812
+What three elements must be present for a person t,exact_anchor,dense_sparse,0.1666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.3562071871080222
+How does section 335 of POCA 2002 define 'appropri,exact_anchor,dense_only,0.1666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.3562071871080222
+How does section 335 of POCA 2002 define 'appropri,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+How does section 335 of POCA 2002 define 'appropri,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"Under section 336 of POCA 2002, what conditions mu",exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under section 336 of POCA 2002, what conditions mu",exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under section 336 of POCA 2002, what conditions mu",exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What three conditions must be met for a disclosure,exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What three conditions must be met for a disclosure,exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+What three conditions must be met for a disclosure,exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under section 338 of POCA 2002, what is the first ",exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"Under section 338 of POCA 2002, what is the first ",exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under section 338 of POCA 2002, what is the first ",exact_anchor,dense_sparse,0.5,0.0,0.0,0.0,0.3333333333333333,1.0,0.6309297535714575,0.2,1.0,0.6309297535714575,0.1,1.0,0.6309297535714575
+How does section 340 of POCA 2002 define 'criminal,exact_anchor,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+How does section 340 of POCA 2002 define 'criminal,exact_anchor,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+How does section 340 of POCA 2002 define 'criminal,exact_anchor,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"Under section 339 of POCA 2002, who has power to p",exact_anchor,dense_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under section 339 of POCA 2002, who has power to p",exact_anchor,sparse_only,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+"Under section 339 of POCA 2002, who has power to p",exact_anchor,dense_sparse,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
+MLR 2017 regulation 3 defines 'beneficial owner' f,cross_reference,dense_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.2,1.0,0.8315546295836225
+MLR 2017 regulation 3 defines 'beneficial owner' f,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 3 defines 'beneficial owner' f,cross_reference,dense_sparse,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.2371977127692962,0.2,1.0,0.4217734095488644
+Regulation 3 of MLR 2017 states that 'business rel,cross_reference,dense_only,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.3868528072345416,0.2,0.5,0.3868528072345416,0.1,0.5,0.3868528072345416
+Regulation 3 of MLR 2017 states that 'business rel,cross_reference,sparse_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+Regulation 3 of MLR 2017 states that 'business rel,cross_reference,dense_sparse,0.5,0.0,0.0,0.0,0.6666666666666666,1.0,0.6934264036172708,0.4,1.0,0.6934264036172708,0.2,1.0,0.6934264036172708
+Regulation 3 of MLR 2017 defines 'customer due dil,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Regulation 3 of MLR 2017 defines 'customer due dil,cross_reference,sparse_only,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.2640681225725909,0.1,0.5,0.2640681225725909
+Regulation 3 of MLR 2017 defines 'customer due dil,cross_reference,dense_sparse,0.125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.1934264036172708
+MLR 2017 regulation 3 provides that 'politically e,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 3 provides that 'politically e,cross_reference,sparse_only,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.2371977127692962,0.2,1.0,0.4144369995533439
+MLR 2017 regulation 3 provides that 'politically e,cross_reference,dense_sparse,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.1772392867840477
+Regulation 28 of MLR 2017 states it applies when a,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Regulation 28 of MLR 2017 states it applies when a,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Regulation 28 of MLR 2017 states it applies when a,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 29 specifies it applies 'in ad,cross_reference,dense_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+MLR 2017 regulation 29 specifies it applies 'in ad,cross_reference,sparse_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+MLR 2017 regulation 29 specifies it applies 'in ad,cross_reference,dense_sparse,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+What standard CDD measures required by regulation ,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What standard CDD measures required by regulation ,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What standard CDD measures required by regulation ,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What must a credit institution apply under MLR 201,cross_reference,dense_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+What must a credit institution apply under MLR 201,cross_reference,sparse_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.2,1.0,0.7977228895450266
+What must a credit institution apply under MLR 201,cross_reference,dense_sparse,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+How does MLR 2017 regulation 35 on politically exp,cross_reference,dense_only,0.1111111111111111,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.1845756967795681
+How does MLR 2017 regulation 35 on politically exp,cross_reference,sparse_only,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.3868528072345416,0.2,0.5,0.3868528072345416,0.1,0.5,0.3868528072345416
+How does MLR 2017 regulation 35 on politically exp,cross_reference,dense_sparse,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.3868528072345416,0.2,0.5,0.3868528072345416,0.1,0.5,0.3868528072345416
+Regulation 30 of MLR 2017 sets the timing rule for,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Regulation 30 of MLR 2017 sets the timing rule for,cross_reference,sparse_only,0.1428571428571428,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.25,0.1301266833307005
+Regulation 30 of MLR 2017 sets the timing rule for,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+A person accused under section 327 of POCA 2002 ma,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+A person accused under section 327 of POCA 2002 ma,cross_reference,sparse_only,0.1111111111111111,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.1845756967795681
+A person accused under section 327 of POCA 2002 ma,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What authorised disclosure under POCA 2002 can pre,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What authorised disclosure under POCA 2002 can pre,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+What authorised disclosure under POCA 2002 can pre,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+How does the protected disclosure mechanism in sec,cross_reference,dense_only,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.1772392867840477
+How does the protected disclosure mechanism in sec,cross_reference,sparse_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+How does the protected disclosure mechanism in sec,cross_reference,dense_sparse,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+Section 335 of POCA 2002 defines 'appropriate cons,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Section 335 of POCA 2002 defines 'appropriate cons,cross_reference,sparse_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.2,1.0,0.8175295903539445
+Section 335 of POCA 2002 defines 'appropriate cons,cross_reference,dense_sparse,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.2371977127692962,0.1,0.5,0.2371977127692962
+"Under section 336 of POCA 2002, what disclosure mu",cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"Under section 336 of POCA 2002, what disclosure mu",cross_reference,sparse_only,0.125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.1934264036172708
+"Under section 336 of POCA 2002, what disclosure mu",cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Section 339 of POCA 2002 empowers the Secretary of,cross_reference,dense_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+Section 339 of POCA 2002 empowers the Secretary of,cross_reference,sparse_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+Section 339 of POCA 2002 empowers the Secretary of,cross_reference,dense_sparse,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+Section 342 of POCA 2002 creates a tipping off off,cross_reference,dense_only,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,0.5,0.3065735963827292,0.2,0.5,0.3065735963827292,0.1,0.5,0.3065735963827292
+Section 342 of POCA 2002 creates a tipping off off,cross_reference,sparse_only,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.3868528072345416,0.2,0.5,0.3868528072345416,0.1,0.5,0.3868528072345416
+Section 342 of POCA 2002 creates a tipping off off,cross_reference,dense_sparse,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.3868528072345416,0.2,0.5,0.3868528072345416,0.1,0.5,0.3868528072345416
+The section 327 offences in POCA 2002 apply to 'cr,cross_reference,dense_only,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.1772392867840477
+The section 327 offences in POCA 2002 apply to 'cr,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+The section 327 offences in POCA 2002 apply to 'cr,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 3 defines 'money laundering' b,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 3 defines 'money laundering' b,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 3 defines 'money laundering' b,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Regulation 27(1)(c) of MLR 2017 requires a relevan,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Regulation 27(1)(c) of MLR 2017 requires a relevan,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Regulation 27(1)(c) of MLR 2017 requires a relevan,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+The failure-to-disclose offence in POCA 2002 secti,cross_reference,dense_only,0.1111111111111111,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.1845756967795681
+The failure-to-disclose offence in POCA 2002 secti,cross_reference,sparse_only,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.2371977127692962,0.1,0.5,0.2371977127692962
+The failure-to-disclose offence in POCA 2002 secti,cross_reference,dense_sparse,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.2371977127692962,0.1,0.5,0.2371977127692962
+MLR 2017 regulation 33 requires enhanced CDD where,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 33 requires enhanced CDD where,cross_reference,sparse_only,0.1666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.2184074368181641
+MLR 2017 regulation 33 requires enhanced CDD where,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 44 requires trustees to mainta,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 44 requires trustees to mainta,cross_reference,sparse_only,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.2,1.0,0.8065735963827293
+MLR 2017 regulation 44 requires trustees to mainta,cross_reference,dense_sparse,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.3868528072345416,0.2,0.5,0.3868528072345416,0.1,0.5,0.3868528072345416
+Section 332 of POCA 2002 creates a failure-to-disc,cross_reference,dense_only,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.3333333333333333,0.2021073465005475,0.2,0.6666666666666666,0.3377593199329953
+Section 332 of POCA 2002 creates a failure-to-disc,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Section 332 of POCA 2002 creates a failure-to-disc,cross_reference,dense_sparse,0.1428571428571428,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.3333333333333333,0.1564262420075854
+MLR 2017 regulation 3 defines 'nominated officer' ,cross_reference,dense_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 3 defines 'nominated officer' ,cross_reference,sparse_only,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MLR 2017 regulation 3 defines 'nominated officer' ,cross_reference,dense_sparse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 "Under MLR 2017 regulation 4, at what point is an e",exact_anchor,hybrid,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
 What ownership or voting rights threshold must an ,exact_anchor,hybrid,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
 "Under MLR 2017 regulation 6, which categories of p",exact_anchor,hybrid,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,1.0,0.38685280723454163,0.1,1.0,0.38685280723454163
@@ -27,7 +162,7 @@ What systemic obligation does MLR 2017 regulation ,exact_anchor,hybrid,1.0,1.0,1
 What records concerning beneficial owners must the,exact_anchor,hybrid,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,1.0,0.5,0.2,1.0,0.5,0.1,1.0,0.5
 "Under MLR 2017 regulation 29, when must a credit i",exact_anchor,hybrid,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
 What information must a credit institution gather ,exact_anchor,hybrid,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
-What five acts constitute the principal money laun,exact_anchor,hybrid,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,1.0,0.38685280723454163,0.1,1.0,0.38685280723454163
+What five acts constitute the principal money laun,exact_anchor,hybrid,0.125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.31546487678572877
 How does section 328 of POCA 2002 define the arran,exact_anchor,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 "Under section 329 of POCA 2002, what three types o",exact_anchor,hybrid,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,1.0,0.2,1.0,1.0,0.1,1.0,1.0
 What three conditions must all be satisfied for a ,exact_anchor,hybrid,0.125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.31546487678572877
@@ -42,25 +177,25 @@ How does section 340 of POCA 2002 define 'criminal,exact_anchor,hybrid,0.0,0.0,0
 MLR 2017 regulation 3 defines 'beneficial owner' f,cross_reference,hybrid,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.23719771276929622,0.1,0.5,0.23719771276929622
 Regulation 3 of MLR 2017 states that 'business rel,cross_reference,hybrid,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.38685280723454163,0.4,1.0,0.6509209298071326,0.2,1.0,0.6509209298071326
 Regulation 3 of MLR 2017 defines 'customer due dil,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-MLR 2017 regulation 3 provides that 'politically e,cross_reference,hybrid,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.2640681225725909,0.1,0.5,0.2640681225725909
+MLR 2017 regulation 3 provides that 'politically e,cross_reference,hybrid,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.38685280723454163,0.2,0.5,0.38685280723454163,0.1,0.5,0.38685280723454163
 Regulation 28 of MLR 2017 states it applies when a,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-MLR 2017 regulation 29 specifies it applies 'in ad,cross_reference,hybrid,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.2,1.0,0.8065735963827293
-What standard CDD measures required by regulation ,cross_reference,hybrid,0.16666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.21840743681816419
+MLR 2017 regulation 29 specifies it applies 'in ad,cross_reference,hybrid,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
+What standard CDD measures required by regulation ,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 What must a credit institution apply under MLR 201,cross_reference,hybrid,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.4,1.0,0.8772153153380493,0.2,1.0,0.8772153153380493
-How does MLR 2017 regulation 35 on politically exp,cross_reference,hybrid,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.38685280723454163,0.4,1.0,0.6509209298071326,0.2,1.0,0.6509209298071326
-Regulation 30 of MLR 2017 sets the timing rule for,cross_reference,hybrid,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,0.25,0.23463936301137822,0.2,0.25,0.19519002499605084,0.1,0.25,0.19519002499605084
+How does MLR 2017 regulation 35 on politically exp,cross_reference,hybrid,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.38685280723454163,0.2,0.5,0.38685280723454163,0.2,1.0,0.5802792108518124
+Regulation 30 of MLR 2017 sets the timing rule for,cross_reference,hybrid,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.25,0.16812753627111746,0.2,0.5,0.29127873064148246
 A person accused under section 327 of POCA 2002 ma,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 What authorised disclosure under POCA 2002 can pre,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 How does the protected disclosure mechanism in sec,cross_reference,hybrid,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.1,0.5,0.6131471927654584
-Section 335 of POCA 2002 defines 'appropriate cons,cross_reference,hybrid,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.2,0.5,0.6131471927654584,0.2,1.0,0.8315546295836225
-"Under section 336 of POCA 2002, what disclosure mu",cross_reference,hybrid,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.38685280723454163,0.2,0.5,0.38685280723454163,0.2,1.0,0.5912352048230277
-Section 339 of POCA 2002 empowers the Secretary of,cross_reference,hybrid,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.4,1.0,0.8503449055347546,0.2,1.0,0.8503449055347546
+Section 335 of POCA 2002 defines 'appropriate cons,cross_reference,hybrid,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.5,0.23719771276929622,0.2,1.0,0.45560514958746035
+"Under section 336 of POCA 2002, what disclosure mu",cross_reference,hybrid,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.38685280723454163,0.4,1.0,0.6509209298071326,0.2,1.0,0.6509209298071326
+Section 339 of POCA 2002 empowers the Secretary of,cross_reference,hybrid,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.4,1.0,0.8772153153380493,0.2,1.0,0.8772153153380493
 Section 342 of POCA 2002 creates a tipping off off,cross_reference,hybrid,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.38685280723454163,0.2,0.5,0.38685280723454163,0.1,0.5,0.38685280723454163
 The section 327 offences in POCA 2002 apply to 'cr,cross_reference,hybrid,0.3333333333333333,0.0,0.0,0.0,0.3333333333333333,0.5,0.3065735963827292,0.2,0.5,0.3065735963827292,0.1,0.5,0.3065735963827292
 MLR 2017 regulation 3 defines 'money laundering' b,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 Regulation 27(1)(c) of MLR 2017 requires a relevan,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 The failure-to-disclose offence in POCA 2002 secti,cross_reference,hybrid,0.16666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.5,0.21840743681816419
 MLR 2017 regulation 33 requires enhanced CDD where,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-MLR 2017 regulation 44 requires trustees to mainta,cross_reference,hybrid,1.0,1.0,0.5,1.0,0.3333333333333333,0.5,0.6131471927654584,0.4,1.0,0.8503449055347546,0.2,1.0,0.8503449055347546
-Section 332 of POCA 2002 creates a failure-to-disc,cross_reference,hybrid,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.3333333333333333,0.20210734650054757,0.2,0.6666666666666666,0.33775931993299535
+MLR 2017 regulation 44 requires trustees to mainta,cross_reference,hybrid,0.5,0.0,0.0,0.0,0.3333333333333333,0.5,0.38685280723454163,0.4,1.0,0.6240505200038379,0.2,1.0,0.6240505200038379
+Section 332 of POCA 2002 creates a failure-to-disc,cross_reference,hybrid,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.3333333333333333,0.20210734650054757,0.1,0.3333333333333333,0.20210734650054757
 MLR 2017 regulation 3 defines 'nominated officer' ,cross_reference,hybrid,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

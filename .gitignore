@@ -35,3 +35,9 @@ Thumbs.db
 
 # Per-notebook plan/spec docs: kept local, not committed (README.md is committed)
 [0-9][0-9]_*.md
+
+# RAGAS working folder: plan docs and drafts, kept local
+ragas/
+
+# Backup files created before in-place data edits
+*.bak

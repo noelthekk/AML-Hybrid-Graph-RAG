@@ -9,7 +9,6 @@ Requires Python 3.11 and [`uv`](https://github.com/astral-sh/uv).
 ```bash
 cd plan/implementation
 uv sync --all-groups
-.venv\Scripts\python -m spacy download en_core_web_sm
 .venv\Scripts\python -m ipykernel install --user --name aml-rag --display-name "AML RAG (Python 3.11)"
 .venv\Scripts\python verify_env.py
 ```
@@ -24,6 +23,8 @@ Place the corpus PDFs in `data/raw/` (see below), then cache the text and launch
 .venv\Scripts\python scripts\extract_pdfs.py   # cache raw text to data/interim/
 .venv\Scripts\python start_jupyter.py          # serves at http://localhost:8888
 ```
+
+`extract_pdfs.py` can extract with either `pdfplumber` or [LiteParse](https://github.com/run-llama/liteparse) — both are real dependencies and either works for most sources (`corpus.extract_pdf_pages` and `corpus.extract_pdf_pages_liteparse` produce the same output shape and work with the same segmentation functions). The default split (`EXTRACTOR` in `extract_pdfs.py`) uses LiteParse for `mlr_2017`/`jmlsg_1`/`jmlsg_2`/`fca_fcg` and `pdfplumber` for `fatf_40` specifically, since LiteParse's reading-order reconstruction breaks down on that one document's styled headings while `pdfplumber` handles it correctly — validated against the real corpus 2026-07-05, full comparison in `01_corpus_and_retrievers.md`'s 2026-07-05 Change log entry.
 
 Run the notebooks in order, selecting the `AML RAG (Python 3.11)` kernel in each. Logs are written to `logs/` (not committed).
 
@@ -51,4 +52,12 @@ Save all files to `data/raw/`. Three download automatically when running noteboo
 
 ## Dependencies
 
-Managed with `uv`: `uv add <pkg>==<version>` for runtime, `uv add --dev <pkg>==<version>` for dev tools. Both update `pyproject.toml` and `uv.lock`.
+Managed with `uv`: `uv add <pkg>==<version>` for runtime, `uv add --dev <pkg>==<version>` for dev tools, `uv remove <pkg>` to remove one. All three update `pyproject.toml` and `uv.lock` together — never hand-edit those arrays directly, or the lockfile silently drifts out of sync.
+
+To check (or force) the venv matches `pyproject.toml`/`uv.lock` exactly:
+
+```bash
+uv sync --all-groups
+```
+
+Unlike `uv add`/`pip install`, this also removes anything installed that isn't declared, so it catches drift in both directions. Running it twice in a row should be a no-op ("Checked N packages," nothing installed/uninstalled) — if it isn't, that's a sign of leftover debris in `.venv` worth investigating.
