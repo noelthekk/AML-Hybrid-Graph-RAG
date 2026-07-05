@@ -24,7 +24,7 @@ Place the corpus PDFs in `data/raw/` (see below), then cache the text and launch
 .venv\Scripts\python start_jupyter.py          # serves at http://localhost:8888
 ```
 
-`extract_pdfs.py` can extract with either `pdfplumber` or [LiteParse](https://github.com/run-llama/liteparse) — both are real dependencies and either works for most sources (`corpus.extract_pdf_pages` and `corpus.extract_pdf_pages_liteparse` produce the same output shape and work with the same segmentation functions). The default split (`EXTRACTOR` in `extract_pdfs.py`) uses LiteParse for `mlr_2017`/`jmlsg_1`/`jmlsg_2`/`fca_fcg` and `pdfplumber` for `fatf_40` specifically, since LiteParse's reading-order reconstruction breaks down on that one document's styled headings while `pdfplumber` handles it correctly — validated against the real corpus 2026-07-05, full comparison in `01_corpus_and_retrievers.md`'s 2026-07-05 Change log entry.
+`extract_pdfs.py` extracts with either `pdfplumber` or [LiteParse](https://github.com/run-llama/liteparse) per source (both real dependencies, same output shape) — see its `EXTRACTOR` mapping for the current split, and `01_corpus_and_retrievers.md`'s 2026-07-05 Change log entry for why `fatf_40` stays on `pdfplumber` specifically.
 
 Run the notebooks in order, selecting the `AML RAG (Python 3.11)` kernel in each. Logs are written to `logs/` (not committed).
 
@@ -36,6 +36,7 @@ Run the notebooks in order, selecting the `AML RAG (Python 3.11)` kernel in each
 | 04 | `04_knowledge_graph.ipynb` | 2 | Cross-reference extraction, NetworkX graph, hop-count experiment |
 | 05 | `05_hybrid_retrieval.ipynb` | 2 | Hybrid RRF retriever (dense + sparse + graph), smoke test |
 | 06 | `06_evaluation_hybrid.ipynb` | 2 | Hybrid evaluation and comparison against the baseline |
+| 07 | `07_ragas_evaluation.ipynb` | 2 | RAGAS + correctness evaluation across all four configs (in progress — see `plan/STATUS.md`) |
 
 ## Corpus PDFs
 
@@ -50,9 +51,13 @@ Save all files to `data/raw/`. Three download automatically when running noteboo
 | JMLSG Part II | `jmlsg_part2.pdf` | [jmlsg.org.uk](https://www.jmlsg.org.uk/guidance/), free, requires name/email |
 | FCA FCG | `fca_fcg.pdf` | [handbook.fca.org.uk](https://www.handbook.fca.org.uk/handbook/FCG.pdf) |
 
+## Cluster deployment
+
+Two self-contained sub-projects for running steps on a GPU cluster (own `pyproject.toml`/`.env.example`, `scp`-able as-is): `cluster/` (reference-answer drafting, Qwen2.5) and `generation_cluster/` (200-answer generation, Llama-3.1-8B). See each folder's own README for setup and usage.
+
 ## Dependencies
 
-Managed with `uv`: `uv add <pkg>==<version>` for runtime, `uv add --dev <pkg>==<version>` for dev tools, `uv remove <pkg>` to remove one. All three update `pyproject.toml` and `uv.lock` together — never hand-edit those arrays directly, or the lockfile silently drifts out of sync.
+Managed with `uv`: `uv add <pkg>==<version>` for runtime, `uv add --dev <pkg>==<version>` for dev tools, `uv remove <pkg>` to remove one. Never hand-edit `pyproject.toml`'s dependency arrays directly, or `uv.lock` silently drifts out of sync.
 
 To check (or force) the venv matches `pyproject.toml`/`uv.lock` exactly:
 
@@ -60,4 +65,4 @@ To check (or force) the venv matches `pyproject.toml`/`uv.lock` exactly:
 uv sync --all-groups
 ```
 
-Unlike `uv add`/`pip install`, this also removes anything installed that isn't declared, so it catches drift in both directions. Running it twice in a row should be a no-op ("Checked N packages," nothing installed/uninstalled) — if it isn't, that's a sign of leftover debris in `.venv` worth investigating.
+Unlike `uv add`/`pip install`, this also removes anything installed that isn't declared, catching drift in both directions. Running it twice in a row should be a no-op — if it isn't, that's leftover `.venv` debris worth investigating.
