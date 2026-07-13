@@ -51,11 +51,38 @@ Save all files to `data/raw/`. Three download automatically when running noteboo
 | JMLSG Part II | `jmlsg_part2.pdf` | [jmlsg.org.uk](https://www.jmlsg.org.uk/guidance/), free, requires name/email |
 | FCA FCG | `fca_fcg.pdf` | [handbook.fca.org.uk](https://www.handbook.fca.org.uk/handbook/FCG.pdf) |
 
-## Cluster deployment
+## Experiments
 
-One self-contained sub-project remains here: `cluster/` (reference-answer drafting, Qwen2.5), own `pyproject.toml`/`.env.example`, `scp`-able as-is — see its own README for setup and usage.
+Two folders hold generation-side experiments run against the 21 "universal failure"
+queries (queries that scored 0 correctness across every retrieval config, both
+reference models, and both generator scales in the primary 200-query evaluation):
 
-Answer generation (both the primary Llama-3.1-8B run and the Llama-3.1-70B generator-scale ablation, `--model-size 8b|70b`) now lives in its own independent repo at `plan/generation_cluster/` (moved out 2026-07-07, since it's actively used for further experiments rather than a one-off artifact) — not part of this repo. Copy its output `results/answers_<model-size>.jsonl` back into this folder's `results/` when a run completes; that's the exact location notebook 07's RAGAS cell groups expect.
+- `experiment/` — failure-mode analysis, a judge-reliability diagnostic, and two
+  prompting/pipeline fixes on the local Llama-3.1-8B generator:
+  `p1_failure_analysis.ipynb` (finds the dominant failure mode is truncation of
+  multi-part clause content), `correctness_reasoning_diagnostic.py` (checks whether the
+  `llm_grade` correctness judge's "no" verdicts are arbitrary or genuinely defensible —
+  finds every one it sampled was a real, specific content gap, not judge unreliability),
+  `p2_structured_prompting.ipynb` (completeness-instruction prompt fix), and
+  `p2_two_step_extraction.ipynb` (extraction-then-synthesis pipeline fix). `p1`/`p2`
+  each have a matching `.py` script the notebook was built from. See its own `README.md`
+  for conventions. Nothing here is validated pipeline output — treat as scratch until an
+  idea is proven out and folded back into notebook 02/07 proper.
+- `gptTest/` — swaps the generator to `gpt-5-nano` (OpenAI API, with and without
+  reasoning effort) across all four retrieval configs, compared against the `experiment/`
+  results above. See `gptTest/plan.md` for the design and `info.md` for the full
+  setup-by-setup comparison table.
+
+Data used by both: `results/p1_universal_failures.jsonl` (the 21 queries, with each
+config's already-retrieved clause IDs — retrieval is never re-run by these experiments),
+`data/clauses.jsonl` (clause text lookup), and `data/test_set.jsonl` (`reference_14b`/
+`reference_72b` answers to score against). `gptTest/` additionally reads the existing
+baseline/P2 scores for its comparison table: `results/correctness_scores.jsonl`,
+`results/ragas_answer_scores.jsonl`, `results/ragas_retrieval_scores.jsonl`,
+`results/p2_structured_prompting_scores.jsonl`, `results/p2v2_two_step_scores.jsonl`.
+Each experiment's own generated answers/scores are written locally to its own folder
+(`experiment/`'s outputs go to the shared top-level `results/`; `gptTest/`'s outputs stay
+self-contained in `gptTest/results/`).
 
 ## Dependencies
 
