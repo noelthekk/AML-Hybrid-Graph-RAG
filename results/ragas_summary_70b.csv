@@ -1,0 +1,9 @@
+config,reference_model,faithfulness,answer_relevancy,similarity,llm_grade
+dense_only,14b,0.61,0.666,0.728,0.34
+dense_only,72b,0.61,0.666,0.723,0.3
+sparse_only,14b,0.67,0.766,0.82,0.38
+sparse_only,72b,0.67,0.766,0.814,0.36
+dense_sparse,14b,0.622,0.738,0.761,0.38
+dense_sparse,72b,0.622,0.738,0.772,0.34
+hybrid,14b,0.682,0.711,0.797,0.46
+hybrid,72b,0.682,0.711,0.786,0.42

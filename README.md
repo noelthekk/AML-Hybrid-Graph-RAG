@@ -36,7 +36,7 @@ Run the notebooks in order, selecting the `AML RAG (Python 3.11)` kernel in each
 | 04 | `04_knowledge_graph.ipynb` | 2 | Cross-reference extraction, NetworkX graph, hop-count experiment |
 | 05 | `05_hybrid_retrieval.ipynb` | 2 | Hybrid RRF retriever (dense + sparse + graph), smoke test |
 | 06 | `06_evaluation_hybrid.ipynb` | 2 | Hybrid evaluation and comparison against the baseline |
-| 07 | `07_ragas_evaluation.ipynb` | 2 | RAGAS + correctness evaluation across all four configs (in progress — see `plan/STATUS.md`) |
+| 07 | `07_ragas_evaluation.ipynb` | 2 | RAGAS + correctness evaluation across all four configs (in progress) |
 
 ## Corpus PDFs
 
@@ -53,7 +53,9 @@ Save all files to `data/raw/`. Three download automatically when running noteboo
 
 ## Cluster deployment
 
-Two self-contained sub-projects for running steps on a GPU cluster (own `pyproject.toml`/`.env.example`, `scp`-able as-is): `cluster/` (reference-answer drafting, Qwen2.5) and `generation_cluster/` (200-answer generation, Llama-3.1-8B). See each folder's own README for setup and usage.
+One self-contained sub-project remains here: `cluster/` (reference-answer drafting, Qwen2.5), own `pyproject.toml`/`.env.example`, `scp`-able as-is — see its own README for setup and usage.
+
+Answer generation (both the primary Llama-3.1-8B run and the Llama-3.1-70B generator-scale ablation, `--model-size 8b|70b`) now lives in its own independent repo at `plan/generation_cluster/` (moved out 2026-07-07, since it's actively used for further experiments rather than a one-off artifact) — not part of this repo. Copy its output `results/answers_<model-size>.jsonl` back into this folder's `results/` when a run completes; that's the exact location notebook 07's RAGAS cell groups expect.
 
 ## Dependencies
 

@@ -24,6 +24,8 @@ data/chroma_db/
 
 # Run logs: timestamped, is large
 logs/
+*.log
+*.pid
 
 # Linter / tooling caches
 .ruff_cache/
